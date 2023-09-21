@@ -1,7 +1,7 @@
 import tweepy
 
-from settings import config
 from files import get_name_girl
+from settings import config
 
 
 def get_client_v2() -> tweepy.Client:
