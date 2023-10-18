@@ -39,7 +39,6 @@ def upload_single_file(image):
     if girl_name in config.tweets:
         image_url = f"${config.ROUTE}/${image}"
         try:
-            """Upload image"""
             media = client_v1.media_upload(filename=image_url)
             media_id = media.media_id
         except tweepy.errors.Forbidden as e:
