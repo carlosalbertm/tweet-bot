@@ -2,7 +2,7 @@
 
 import os
 import re
-from settings import config
+from settings import *
 
 
 def get_files_by_size(path):
