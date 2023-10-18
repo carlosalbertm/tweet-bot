@@ -17,6 +17,7 @@ from utilities.twitterConn import upload_multiple_files, get_client_v2
 
 
 def tweet_scheduled():
+    """Main function to post simple tweets"""
     mex_time = pytz.timezone('Japan')
 
     client = get_client_v2()
