@@ -32,7 +32,7 @@ def tweet_scheduled():
             media_ids = data_media[0]
             images_for_delete = data_media[1]
             print(media_ids)
-            
+
             tweet = config.tweets[girl_name]
             if media_ids:
                 response = client.create_tweet(text=tweet, media_ids=media_ids)
