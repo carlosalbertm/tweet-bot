@@ -34,7 +34,7 @@ def tweet_scheduled():
             print(media_ids)
             
             tweet = config.tweets[girl_name]
-            if len(media_ids):
+            if media_ids:
                 response = client.create_tweet(text=tweet, media_ids=media_ids)
                 currtent_time = datetime.now(mex_time).strftime("%H:%M:%S")
                 print(f'https://twitter.com/user/status/{response.data["id"]}')
