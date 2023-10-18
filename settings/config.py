@@ -1,3 +1,5 @@
+"""Module providingthe base varible config"""
+
 CONSUMER_KEY = ''
 CONSUMER_SECRET = ''
 ACCESS_TOKEN = ''
