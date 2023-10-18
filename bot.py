@@ -13,7 +13,7 @@ import tweepy
 from apscheduler.schedulers.background import BackgroundScheduler
 from settings import config
 from utilities.files import get_files_by_size, get_name_girl, delete_images_tweeted
-from utilities.twitterConn import upload_multiple_files, get_client_v2
+from utilities.twitter_conn import upload_multiple_files, get_client_v2
 
 
 def tweet_scheduled():
