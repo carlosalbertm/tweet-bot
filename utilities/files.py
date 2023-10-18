@@ -9,8 +9,10 @@ def get_files_by_size(path):
     """Create a list of files in directory along with the size"""
     images_files = []
 
-    fun = lambda x: os.path.isfile(os.path.join(path, x))
-    files_list = filter(fun, os.listdir(path))
+    def check_file(file):
+        return os.path.isfile(os.path.join(path, file))
+
+    files_list = filter(check_file, os.listdir(path))
 
     size_of_file = [(f, os.stat(os.path.join(path, f)).st_size) for f in files_list]
 
