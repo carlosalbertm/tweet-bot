@@ -6,4 +6,4 @@ BEARER_TOKEN = ''
 IMAGE_BATCH_SIZE = 4
 
 ROUTE = 'rute'
-tweet = {}
+tweets = {}
