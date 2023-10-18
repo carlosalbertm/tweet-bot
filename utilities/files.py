@@ -1,3 +1,5 @@
+"""Module providing a function to manafe file"""
+
 import os
 import re
 from settings import config
