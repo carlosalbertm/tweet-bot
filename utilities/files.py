@@ -31,5 +31,5 @@ def get_name_girl(image):
 def delete_images_tweeted(images_to_delete):
     """Delete files in array object"""
     for image in images_to_delete:
-        image_url = f"${config.ROUTE}/${image}"
+        image_url = f"${settings.ROUTE}/${image}"
         os.remove(image_url)
