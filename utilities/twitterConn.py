@@ -5,6 +5,7 @@ from settings import config
 
 
 def get_client_v2() -> tweepy.Client:
+    """Function initialize twiter API."""
     return tweepy.Client(
         bearer_token=config.BEARER_TOKEN,
         consumer_key=config.CONSUMER_KEY,
@@ -29,6 +30,7 @@ def get_twitter_conn_v1() -> tweepy.API:
 
 
 def upload_single_file(image):
+    """Function upload a file using twiter API."""
     client_v1 = get_twitter_conn_v1()
 
     girl_name = get_name_girl(image)
@@ -45,6 +47,7 @@ def upload_single_file(image):
 
 
 def upload_multiple_files(files):
+    """Function upload multiple files using twiter API."""
     media_ids = []
     image_to_delete = []
     base_name = get_name_girl(files[0])
