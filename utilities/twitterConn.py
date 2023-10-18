@@ -1,3 +1,5 @@
+"""Module providing a function to manage twitter api connection"""
+
 import tweepy
 
 from files import get_name_girl
