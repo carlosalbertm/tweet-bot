@@ -1,3 +1,5 @@
+"""Module providing a function to manage twitter api connection"""
+
 import tweepy
 
 from files import get_name_girl
@@ -5,6 +7,7 @@ from settings import config
 
 
 def get_client_v2() -> tweepy.Client:
+    """Function initialize twiter API."""
     return tweepy.Client(
         bearer_token=config.BEARER_TOKEN,
         consumer_key=config.CONSUMER_KEY,
@@ -29,13 +32,13 @@ def get_twitter_conn_v1() -> tweepy.API:
 
 
 def upload_single_file(image):
+    """Function upload a file using twiter API."""
     client_v1 = get_twitter_conn_v1()
 
     girl_name = get_name_girl(image)
     if girl_name in config.tweets:
         image_url = f"${config.ROUTE}/${image}"
         try:
-            """Upload image"""
             media = client_v1.media_upload(filename=image_url)
             media_id = media.media_id
         except tweepy.errors.Forbidden as e:
@@ -45,6 +48,7 @@ def upload_single_file(image):
 
 
 def upload_multiple_files(files):
+    """Function upload multiple files using twiter API."""
     media_ids = []
     image_to_delete = []
     base_name = get_name_girl(files[0])
