@@ -3,7 +3,7 @@
 import tweepy
 
 from files import get_name_girl
-from settings import config
+from settings import *
 
 
 def get_client_v2() -> tweepy.Client:
