@@ -34,8 +34,9 @@ def get_twitter_conn_v1() -> tweepy.API:
 def upload_single_file(image):
     """Function upload a file using twiter API."""
     client_v1 = get_twitter_conn_v1()
-
+    media_id = None
     girl_name = get_name_girl(image)
+
     if girl_name in config.tweets:
         image_url = f"${config.ROUTE}/${image}"
         try:
